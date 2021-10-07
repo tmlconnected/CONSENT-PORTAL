@@ -1,0 +1,214 @@
+
+<html>
+    <head>
+        <title>TATA MOTORS FEEDBACK</title>
+    
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+        <link href="https://salesfeedback.tatamotors.com/delivery/fonts/font.css" rel="stylesheet" type="text/css">
+        
+        <script src="https://salesfeedback.tatamotors.com/delivery/assets/js/jQuery-2.1.4.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://salesfeedback.tatamotors.com/delivery/assets/bootstrap/css/bootstrap.css">
+    
+        
+        <!-- Website Font style -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        
+  
+  
+  
+        
+        
+        
+    </head>
+  
+    
+    <body onload="translate1();update_first_link_opened_time();">
+       
+         
+       <div class="background">
+         
+       
+      
+       
+    
+            
+        
+        <div class="container">
+            <div class="row main">
+    
+                <div class="topdiv">
+    
+    
+    
+                    <img src="https://salesfeedback.tatamotors.com/delivery/assets/images/tata_group_logo.png">
+                   
+                    <div class="row">
+                        <div class="col col-md-5"></div>
+                        <div class="col col-md-2">
+                            <h5 style="text-align: center;color:white;">Select Language</h5>
+                        </div>
+                        <div class="col col-md-5"></div>
+                    </div>
+                    <div class="row" style="padding-bottom:15px;">
+                        <div class="col col-md-5"></div>
+                        <div class="col col-md-2">
+                            <select class="form-control" id="choose_language" onchange="translate1();">
+                                <option value="english" selected>English</option>
+                                                                    <option value="hindi" >Hindi</option>
+                                        
+                                                        </select>
+                        </div>
+                        <div class="col col-md-5"></div>
+                    </div>
+    
+                </div>
+                
+    
+                <div class="main-login main-center">
+                    <input type="hidden" id="CURL" value="SO-KAMAL-2122-000408">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="english" style="display: none;"> 
+                               "I, hereby, unconditionally authorize Tata Motors and its authorized channel partners to call, send SMS/ WhatsApp, emails and also to transfer my data/ details to the third parties for commercial activities. This consent overrides any registration for DND/ DNC/ NDNC."
+                            </p>
+                            <p class="hindi" style="display: none;">"मैं, एतद्द्वारा, टाटा मोटर्स और उसके अधिकृत चैनल भागीदारों को कॉल करने, एसएमएस/व्हाट्सएप, ईमेल भेजने और व्यावसायिक गतिविधियों के लिए अपने डेटा/विवरण को तीसरे पक्ष को स्थानांतरित करने के लिए बिना शर्त अधिकृत करता हूं। यह सहमति डीएनडी/डीएनसी/एनडीएनसी के लिए किसी भी पंजीकरण को ओवरराइड करती है। ।"
+                                </p>
+                        </div>
+                    </div>
+                    <div style="display:block;" align="center" id="thankYouDivId" style="width:50%;">
+    
+                        <div id="serve_div " class="text-left">
+                    
+    
+                           
+                           <div>
+                            <button class="hindi btn btn-primary my-2" style="display:none;">मैं सहमत हूं </button>
+                           
+                           </div>
+                          
+                          
+                         <div>
+                           
+                            <form id="myForm" action="http://127.0.0.1:5500/index.html">
+                                <input type="checkbox" id="Checkbox1" name = "userId" value = "1" />
+                            
+                               
+                               <input type="submit" id="submit" value="I Agree" class="english btn btn-primary my-2" style="display:none;" placeholder="Agree">
+                               </form> 
+                         </div>  
+                         
+                            <div class="row">
+                                <div class="form-group ">
+                                    <p id="GFG_DOWN"
+                                    style="color: green; 
+                                           font-size: 24px;
+                                           font-weight: bold;">
+                                 </p>
+                                    <div class="col col-md-2" style="display: none;">
+                                        <button id="NEXT" class="btn btn-primary btn-lg btn-block login-button" onClick="document.getElementById('mesg_default').style.display='block';document.getElementById('simley').style.display='block';document.getElementById('mesg').style.display='none';document.getElementById('NeutralDiv').style.display='none';document.getElementById('serve_div').style.display='none';">
+                                            <p class="hindi" style="display:none;">आगे </p>
+                                            <p class="english" style="display:none;">Next</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div><footer class="">
+                        <div class="container" style="margin-top: -2px;">
+                            <div class="col-md-6 col-12 float-left pl-0">
+                
+                                <p>
+                                    Copyright  © 2019 <span class="footer-logo">
+                                        <img src="logo-footer.png" alt="" style="WIDTH: 75PX!important;">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-12 float-left pr-0">
+                                <ul class="menu float-right" style="list-style: none;margin-bottom: 0px;">
+                                    <li><a href="https://tatamotors.sharepoint.com/Sites/c-app/s-MTMDev/SitePages/Disclaimer.aspx" style="color:white!important; font-size:12px;" title="Disclaimer">Disclaimer</a></li>
+                                </ul>
+                            </div>
+                
+                
+                
+                        </div>
+                    </footer>
+
+                    
+    
+    
+                     
+    
+           
+     
+            <script>
+                function translate1() {
+                    var e = document.getElementById("choose_language");
+                    var choose_language = e.options[e.selectedIndex].value;
+                    //alert(choose_language);
+                    if (choose_language == "hindi") {
+                        $('.hindi').show();
+                        $('.english').hide();
+                    }
+                    if (choose_language == "english") {
+                        $('.english').show();
+                        $('.hindi').hide();
+                    }
+                }
+    
+               
+    
+             
+                var url = "http://127.0.0.1:5500/index.html";
+
+$("#submit").click(function() {
+    var allVals = new Array();  
+    $("input:checkbox[name=userId]:checked").each(function () {
+    allVals.push($(this).val());
+    console.log(allVals);
+
+      $.ajax({
+              url: url,
+              data: {
+              userId: allVals
+          },
+              type: "GET",
+              dataType: "json",
+        })
+        .done(function (json) {
+          console.log(json);
+
+        }); 
+});
+    });
+               
+            </script>
+            <script>
+        
+fetch('http://consent-lookup-api-dev-esb.api.tatamotors.com/api/consent_details/view')
+    // Handle success
+    .then(response => response.json())  // convert to json
+    .then(json => console.log(json))    //print data to console
+    .catch(err => console.log('Request Failed', err)); // Catch errors
+
+    
+            </script>
+    </body>
+    
+    </html>
