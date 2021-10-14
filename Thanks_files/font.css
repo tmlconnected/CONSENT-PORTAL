@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'UniNeueFamily';
+  src: url('UniNeueFamily/UniNeueRegular.otf') format("opentype");;
+}
+@font-face {
+  font-family: 'UniNeueFamilyBold';
+  src: url('UniNeueFamily/UniNeueBold.otf') format("opentype");;
+}
+@font-face {
+  font-family: 'UniNeueFamilyThin';
+  src: url('UniNeueFamily/Fontfabric-UniNeueThin.otf') format("opentype");;
+}

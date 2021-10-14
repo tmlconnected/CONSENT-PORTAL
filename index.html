@@ -1,7 +1,6 @@
-
 <html>
     <head>
-        <title>TATA MOTORS FEEDBACK</title>
+        <title>TATA MOTORS USER CONSENT</title>
     
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <meta charset="UTF-8">
@@ -22,37 +21,16 @@
         <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-        <link href='style.css' rel='stylesheet' type='text/css'>
-        
-  
-  
-  
-        
-        
-        
+        <link href='/style.css' rel='stylesheet' type='text/css'>        
     </head>
   
     
-    <body onload="translate1();update_first_link_opened_time();">
-       
-         
-       <div class="background">
-         
-       
-      
-       
-    
-            
-        
+    <body onload="translate1();">
+       <div class="background"> 
         <div class="container">
             <div class="row main">
-    
                 <div class="topdiv">
-    
-    
-    
                     <img src="https://salesfeedback.tatamotors.com/delivery/assets/images/tata_group_logo.png">
-                   
                     <div class="row">
                         <div class="col col-md-5"></div>
                         <div class="col col-md-2">
@@ -66,7 +44,6 @@
                             <select class="form-control" id="choose_language" onchange="translate1();">
                                 <option value="english" selected>English</option>
                                                                     <option value="hindi" >Hindi</option>
-                                        
                                                         </select>
                         </div>
                         <div class="col col-md-5"></div>
@@ -100,11 +77,11 @@
                           
                          <div>
                            
-                            <form id="myForm" action="http://127.0.0.1:5500/index.html">
+                            <form id="myForm" action="/thanks">
                                 <input type="checkbox" id="Checkbox1" name = "userId" value = "1" />
                             
                                
-                               <input type="submit" id="submit" value="I Agree" class="english btn btn-primary my-2" style="display:none;" placeholder="Agree">
+                               <input type="button" id="test07" value="I Agree" class="english btn btn-primary my-2" style="display:none;" placeholder="Agree">
                                </form> 
                          </div>  
                          
@@ -149,14 +126,6 @@
                 
                         </div>
                     </footer>
-
-                    
-    
-    
-                     
-    
-           
-     
             <script>
                 function translate1() {
                     var e = document.getElementById("choose_language");
@@ -171,41 +140,68 @@
                         $('.hindi').hide();
                     }
                 }
-    
-               
-    
              
                 var url = "http://127.0.0.1:5500/index.html";
 
-$("#submit").click(function() {
-    var allVals = new Array();  
-    $("input:checkbox[name=userId]:checked").each(function () {
-    allVals.push($(this).val());
-    console.log(allVals);
+// $("#submit").click(function() {
+//     var allVals = new Array();  
+//     $("input:checkbox[name=userId]:checked").each(function () {
+//     allVals.push($(this).val());
+//     console.log(allVals);
+// 
+//       $.ajax({
+//               url: url,
+//               data: {
+//               userId: allVals
+//           },
+//               type: "GET",
+//               dataType: "json",
+//         })
+//         .done(function (json) {
+//           console.log(json);
+// 
+//         }); 
+// });
+//     });
 
-      $.ajax({
-              url: url,
-              data: {
-              userId: allVals
-          },
-              type: "GET",
-              dataType: "json",
-        })
-        .done(function (json) {
-          console.log(json);
+const button = document.getElementById('test07');
+button.addEventListener('click', function(e) {
+  console.log('button was clicked');
 
-        }); 
+  var url_string = window.location.href; //window.location.href
+var url = new URL(url_string);
+var mobileNumber = url.searchParams.get("mobileNumber");
+var consentId = url.searchParams.get("consentId");
+console.log(consentId);
+
+fetch('/clicked?' + new URLSearchParams({
+    "mobileNumber": mobileNumber,
+    "consentId": consentId,
+}));
+ // fetch("/clicked"+"/?mobileNumber="+mobileNumber+"&consentId="+consentId, {method: 'GET'})
+ //    .then(function(response) {
+ //      if(response.ok) {
+ //        console.log('Click was recorded');
+       
+ //        return;
+ //      }
+ //      throw new Error('Request failed. Could not submit request.');
+ //    })
+ //    .catch(function(error) {
+ //      console.log(error);
+ //    });
+   document.getElementById("myForm").submit();
+
 });
-    });
                
             </script>
             <script>
         
-fetch('http://consent-lookup-api-dev-esb.api.tatamotors.com/api/consent_details/view')
-    // Handle success
-    .then(response => response.json())  // convert to json
-    .then(json => console.log(json))    //print data to console
-    .catch(err => console.log('Request Failed', err)); // Catch errors
+// fetch('http://consent-lookup-api-dev-esb.api.tatamotors.com/api/consent_details/view')
+//     Handle success
+//     .then(response => response.json())  // convert to json
+//     .then(json => console.log(json))    //print data to console
+//     .catch(err => console.log('Request Failed', err)); // Catch errors
 
     
             </script>
